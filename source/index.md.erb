@@ -14,51 +14,156 @@ search: false
 
 <aside class="notice">Last updated: 08/10/2015</aside>
 
+# Data Manager for Salesforce Overview
+
+Smartsheet Data Manager for Salesforce allows you to export Salesforce data to Smartsheet, import Smartsheet data into Salesforce, and save export and import configurations as reusable workflows that you can use any time.  
+
+<aside class="notice">At this time, the private beta provides a manual-only update experience (no automatic updates), but it's the first step toward delivering a fully automatic update experience (target date TBD).</aside>
+
+Benefits of using the Data Manager include, but are not limited to, the following:
+
+* Use Smartsheet to publish selected Salesforce data and share with internal and external stakeholders for review and feedback.
+* Use Smartsheet as a light-weight data editing tool to make bulk changes to your Salesforce data. Ex.: export your selected Opportunities to Smartsheet, update, and import them back into Salesforce.
+* Enable your project managers and other stakeholders to view and update Salesforce data using Smartsheet.
+* Import your Smartsheet data into Salesforce so you can include it in your Salesforce reports.
+
 # Private Beta Overview
 
 ## What is private beta?
 
+Private beta is a limited enrollment program during which we will work with a select group of Smartsheet customers to test and improve our Data Manager for Salesforce. Participants will not only get early access to the app, but will also help us shape its roadmap.
+
 ## How long will the private beta last?
+
+Before we release our app to the public, we want to make sure it is stable, performs well, and is sufficiently comprehensive to address key customer scenarios. We expect that the private beta will run for 2-3 weeks, but we reserve the right to extend it if necessary.
 
 ## Who is eligible to participate in the private beta?
 
+<aside class="notice">Current Smartsheet customers can apply to participate (see <a href="#enrollment">the next section</a> for enrollment instructions).  We will review your application and let you know whether you are a good fit for the private beta.</aside>
+
+**We are looking for power users that:**
+
+* Are current or prospective Salesforce users.
+* Have access to Salesforce today, either in sandbox or production.
+* Understand that this is beta software and may have issues.
+* Are willing to invest the time in testing the software.
+* Are willing to provide feedback on usability, defects or performance.
+
 # Enrollment
+
+<aside class="notice">You must be officially enrolled in the Data Manager for Salesforce private beta to be able to use it.  If you are not, you will get an error while attempting to connect the Data Manager to Smartsheet (see our <a href="#faq">FAQ</a> below for details).</aside>
+
+To enroll, please use our [online signup form](https://app.smartsheet.com/b/form?EQBCT=cecacfac4ecf46a2a3317f8cbd9fea48).  Your submission will be reviewed, and within 24 hours of your request you should receive an email notification as to whether it's been approved.
 
 # Requirements
 
+* Smartsheet [user license](http://help.smartsheet.com/customer/portal/articles/520100-user-types#licenseduser).
+* Access to Salesforce sandbox or production instance.
+* [Smartsheet Project Management for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4), version 2.2 or later.
+
+
 # <span class="customTOCSectionHeading">Installation</span>
 
-# Existing Smartsheet for Salesforce customers
+<aside class="notice">You will need the help of your Salesforce administrator to install the Smartsheet for Salesforce package.</aside>
+
+# Existing Smartsheet/Salesforce customers
+
+If you already have the [Smartsheet Project Management for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) managed package installed in your Salesforce instance, your Salesforce administrator will need to make sure you have the most recent version of the managed package that includes Data Manager.  
+
+Your administrator can check the version of the managed package by going to Setup > Installed Packages and looking at the version for the installed package “Smartsheet Project Management”. If you do not have the most recent version installed, your administrator will need to upgrade your package to the most recent version.
 
 # New Smartsheet for Salesforce customers
 
-# Configuring Smartsheet for Salesforce
+Your Salesforce administrator needs to navigate to AppExchange to install the [Smartsheet Project Management for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) managed package into your Salesforce instance.
+
+# Configuring Salesforce
+
+The Smartsheet Project Management for Salesforce package contains two sets of features:
+
+* The "legacy" features which allow linking sheets to standard or custom objects (via related lists).  These features are production quality and are not the focus of this private beta program - they have not changed and continue to work as before.  If you are interested in using these features, your Salesforce administrator must follow the **Smartsheet Installation Guide for Salesforce** (found in our [AppExchange](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) listing under DETAILS tab > CUSTOMIZATION GUIDES section) to configure them.
+
+* Smartsheet Data Manager for Salesforce is a brand new set of capabilities that enables data export to Smartsheet, import from Smartsheet, and two-way manual data updates.  The private beta program is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
 
 # Accessing Data Manager
 
-# Accepting private beta user agreement (EULA)
+<aside class="success">Once Smartsheet for Salesforce is installed in your Salesforce instance, you don't need to be a Salesforce administrator to use it.</aside>
+
+Navigate to the app menu and select "Smartsheet" from the dropdown:
+
+<img src="images/screenshots/platformSmartsheet.png" /></br></br>
+
+That will immediately take you to the Smartsheet Data Manager tab:
+
+<img src="images/screenshots/dataManager.png" /></br></br>
+
+# Accepting the User Agreement
+
+<aside class="notice">You will only be asked to agree to this the first time you access the Data Manager.</aside>
+
+You will be asked to accept the private beta user agreement before proceeding:
+
+<img src="images/screenshots/userAgreement.png" /></br></br>
 
 # Connecting to Smartsheet
 
+Click on "Connect to Smartsheet" and then follow the steps to authorize access between the app and your Smartsheet account.
 
 # <span class="customTOCSectionHeading">Usage</span>
 
 # Data Manager Dashboard
 
-# Creating a new workflow (export or import)
+The Data Manager default view is the Dashboard that includes buttons to create new Export or Import workflows, the list of existing workflows (if any), and the History tab: 
 
-# Checking workflow status and history
+<img src="images/screenshots/dataManagerDashboard.png" /></br></br> 
 
-# Running an existing workflow
+# Creating a New Workflow
 
-# Modifying an existing workflow
+To create an export or import workflow, click on either the "New Export" or “New Import” button. A workflow wizard will pop-up and list 5 steps to create the new workflow.  Proceed through the 5 steps in the wizard. At the end of the process, your new export or import will be immediately queued up for execution, and saved as a reusable workflow to your Dashboard.
+
+<img src="images/screenshots/createNewWorkflow.png" /></br></br>
+
+# Workflow Status and History
+
+<aside class="notice">The history tab on the Dashboard will list every workflow that is currently queued or has previously processed. It will also display warnings or error messages if the workflow did not process correctly.</aside>
+
+When checking the status of a job that is currently processing use the refresh icon, next to the History tab, to update the listings:
+
+<img src="images/screenshots/checkStatus.png" /></br></br>
+
+# Running an Existing Workflow
+
+Once you create a workflow, you can run it any time from your Dashboard to update the mapped fields in your destination with the most current data from your source:
+
+<aside class="warning"><b>IMPORTANT</b>: When you run an existing workflow, it <b>will overwrite</b> the mapped fields in your destination with the most current data from your source.</aside>
+
+
+<img src="images/screenshots/runExistingWorkflow.png" /></br></br>
+
+
+# Modifying an Existing Workflow
+
+You can modify an existing workflow (e.g., map additional fields, add filters, etc.) without running it by clicking on the adjacent gear icon:
+
+<img src="images/screenshots/modifyExistingWorkflow.png" /></br></br>
 
 
 # <span class="customTOCSectionHeading">Support</span>
 
-If you encounter an error, have a feature request or any other feedback, please send detailed information (ideally, including screenshots) to us at api@smartsheet.com.
+If you encounter an error, have a feature request or any other feedback, please send detailed information (ideally, including screenshots) to us at [api@smartsheet.com](mailto:api@smartsheet.com).
+
+
 
 # <span class="customTOCSectionHeading">FAQ</span>
+
+## Why am I seeing this error - "Unexpected error", when expanded says that "ODBC is not enabled for your account"?
+
+After you attempt to "Connect to Smartsheet" from within the Data Manager, you may see this error message:
+
+<img src="images/screenshots/faq1.png" /> </br></br>
+
+If you do, this is because Salesforce integration access has not been enabled for your Smartsheet account.  Please remember that your Smartsheet account must be enabled to participate in the private beta.  Furthermore, you must be a licensed Smartsheet user to use the integration.  Please see the Requirements section in this document for more information, or contact us at [api@smartsheet.com](mailto:api@smartsheet.com) for help with private beta enrollment, or if you believe this is in error.
+
+
 
 
 
