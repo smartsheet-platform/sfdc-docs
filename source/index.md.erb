@@ -14,7 +14,7 @@ search: false
 
 <aside class="notice">Last updated: 08/10/2015</aside>
 
-# Data Manager for Salesforce Overview
+# Overview
 
 Smartsheet Data Manager for Salesforce allows you to export Salesforce data to Smartsheet, import Smartsheet data into Salesforce, and save export and import configurations as reusable workflows that you can use any time.  
 
@@ -27,7 +27,7 @@ Benefits of using the Data Manager include, but are not limited to, the followin
 * Enable your project managers and other stakeholders to view and update Salesforce data using Smartsheet.
 * Import your Smartsheet data into Salesforce so you can include it in your Salesforce reports.
 
-# Private Beta Overview
+# Private Beta
 
 ## What is private beta?
 
@@ -39,8 +39,6 @@ Before we release our app to the public, we want to make sure it is stable, perf
 
 ## Who is eligible to participate in the private beta?
 
-Current Smartsheet customers can apply to participate (see [the next section](#enrollment) for enrollment instructions).  We will review your application and let you know whether you are a good fit for the private beta.
-
 **We are looking for power users that:**
 
 * Are current or prospective Salesforce users.
@@ -49,7 +47,9 @@ Current Smartsheet customers can apply to participate (see [the next section](#e
 * Are willing to invest the time in testing the software.
 * Are willing to provide feedback on usability, defects or performance.
 
-# Enrollment
+Current Smartsheet customers can apply to participate (see [the next section](#enrollment) for enrollment instructions).  We will review your application and let you know whether you are a good fit for the private beta.
+
+## Enrollment
 
 <aside class="notice">You must be officially enrolled in the Data Manager for Salesforce private beta to be able to use it.  If you are not, you will get an error while attempting to connect the Data Manager to Smartsheet (see our <a href="#faq">FAQ</a> below for details).</aside>
 
@@ -61,12 +61,15 @@ To enroll, please use our [online signup form](https://app.smartsheet.com/b/form
 * Access to Salesforce sandbox or production instance.
 * [Smartsheet Project Management for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4), version 2.2 or later.
 
+# Support
+
+If you encounter an error, have a feature request or any other feedback, please send detailed information (ideally, including screenshots) to us at [api@smartsheet.com](mailto:api@smartsheet.com).
 
 # <span class="customTOCSectionHeading">Installation</span>
 
 <aside class="notice">You will need the help of your Salesforce administrator to install the Smartsheet for Salesforce package.</aside>
 
-# Existing Smartsheet/Salesforce customers
+# Existing Smartsheet for Salesforce customers
 
 If you already have the [Smartsheet Project Management for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) managed package installed in your Salesforce instance, your Salesforce administrator will need to make sure you have the most recent version of the managed package that includes Data Manager.  
 
@@ -76,13 +79,13 @@ Your administrator can check the version of the managed package by going to Setu
 
 Your Salesforce administrator needs to navigate to AppExchange to install the [Smartsheet Project Management for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) managed package into your Salesforce instance.
 
-# Configuring Salesforce
+# Configuration
 
 The Smartsheet Project Management for Salesforce package contains two sets of features:
 
-* The "legacy" features which allow linking sheets to standard or custom objects (via related lists).  These features are production quality and are not the focus of this private beta program - they have not changed and continue to work as before.  If you are interested in using these features, your Salesforce administrator must follow the **Smartsheet Installation Guide for Salesforce** (found in our [AppExchange](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) listing under DETAILS tab > CUSTOMIZATION GUIDES section) to configure them.
+1. The "legacy" features which allow linking sheets to standard or custom objects (via related lists).  These features are production quality and are not the focus of this private beta program - they have not changed and continue to work as before.  If you are interested in using these features, your Salesforce administrator must follow the **Smartsheet Installation Guide for Salesforce** (found in our [AppExchange](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) listing under DETAILS tab > CUSTOMIZATION GUIDES section) to configure them.
 
-* Smartsheet Data Manager for Salesforce is a brand new set of capabilities that enables data export to Smartsheet, import from Smartsheet, and two-way manual data updates.  The private beta program is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
+2. Smartsheet Data Manager for Salesforce is a brand new set of capabilities that enables data export to Smartsheet, import from Smartsheet, and two-way manual data updates.  The private beta program is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
 
 # Accessing Data Manager
 
@@ -144,16 +147,9 @@ You can modify an existing workflow (e.g., map additional fields, add filters, e
 
 <img src="images/screenshots/modifyExistingWorkflow.png" /></br></br>
 
-
-# <span class="customTOCSectionHeading">Support</span>
-
-If you encounter an error, have a feature request or any other feedback, please send detailed information (ideally, including screenshots) to us at [api@smartsheet.com](mailto:api@smartsheet.com).
-
-
-
 # <span class="customTOCSectionHeading">FAQ</span>
 
-## Why am I seeing this error - "Unexpected error", when expanded says that "ODBC is not enabled for your account"?
+## Why am I seeing the "Salesforce integration is not enabled for this Smartsheet user..." error?
 
 After you attempt to "Connect to Smartsheet" from within the Data Manager, you may see this error message:
 
