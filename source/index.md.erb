@@ -12,7 +12,7 @@ search: false
 
 # <span class="customTOCSectionHeading">Getting Started</span>
 
-<aside class="notice">Last updated: 09/18/2015</aside>
+<aside class="notice">Last updated: 09/21/2015</aside>
 
 # Overview
 
@@ -95,12 +95,12 @@ Read and accept the terms and conditions, and then click **Confirm and Install**
 
 # Install Smartsheet for Salesforce
 
-After redirecting, log into your Salesforce Admin Account and:
+After redirecting, log into your Salesforce admin account and:
 
 1. Select **Install for All Users**
 2. Click **Install**
 
-<aside class="notice"><b>Note</b>: To view a list of permissions for the package, click on "<b>API Access</b>"</aside>
+<aside class="notice"><b>Note</b>: To view a list of permissions for the package, click on <b>API Access</b>.</aside>
 
 <img src="images/gettingTheApp/4install.png"></br>
 
@@ -130,6 +130,8 @@ This prevents users who are not administrators from seeing the Smartsheet Integr
 
 # <span class="customTOCSectionHeading">Configuration</span>
 
+This section covers the process to configure Smartsheet within Salesforce. These steps are recommended in order to provide the best experience possible.
+
 # Custom Field Relationships
 
 Next, you must create a relationship between the Smartsheet object and other objects within Salesforce.com. This allows you to have a Smartsheet related list on another object.
@@ -151,7 +153,7 @@ Under **Custom Fields & Relationships**, click **New**:
 
 ## Create a Relationship
 
-Click the **Lookup Relationship** option, then click **Next** at the bottom of the page:
+Select the **Lookup Relationship** button, then click **Next** at the bottom of the page:
 
 <img src="images/customFieldRelationships/3customField.png"></br></br>
 
@@ -221,15 +223,22 @@ Drag the **Smartsheets** related list from the list picker in the page header to
 
 ## Related List Properties
 
-In the page layout, click the **wrench icon** next to the **Smartsheets** list you just dragged.
+In the page layout:
 
-Next, In the **Available Fields** list, click **Description**, and then click the **Add button (right arrow)** to add it:
+1. click the **wrench icon** next to the **Smartsheets** list you just dragged.
+2. In the **Available Fields** list, click **Description**, and then click the **Add button (right arrow)** to add it:
 
 <img src="images/smartsheetRelatedLists/4relatedListProperties.png"></br></br>
 
-Click the **+ (plus)** icon on the right side of the **Buttons** section to expand the Button properties. Click **Link Existing Smartsheet** and **Launch Smartsheet** from the Available Buttons list, and then click the **Add button (right arrow)**.
+1. Click the **+ (plus)** icon on the right side of the **Buttons** section to expand the Button properties. 
+2. Click **Link Existing Smartsheet** and **Launch Smartsheet** from the Available Buttons list
+3. Click the **Add button (right arrow)**
 
-Click the **Launch Smartsheet** button in the **Selected Buttons** list, then click the **Down button (down arrow)** to move it after the **Link Existing Smartsheet** button. Then click **OK**.
+Then:
+
+1. Click the **Launch Smartsheet** button in the **Selected Buttons** list
+2. Click the **Down button (down arrow)** to move it after the **Link Existing Smartsheet** button. 
+3. Then click **OK**
 
 <img src="images/smartsheetRelatedLists/5buttons.png"></br></br>
 
@@ -253,9 +262,7 @@ This is an optional step that gives your users an easy way to open Smartsheet by
 
 Under **Setup**:
 
-1. Select **Customize**
-2. **Home**
-3. Then **Home Page Layouts**
+1. Select **Customize** > **Home** > **Home Page Layouts**
 4. Click **Edit** next to the home page layout you want to change
 
 <img src="images/homepage/1homePageLayouts.png"></br></br>
@@ -355,9 +362,9 @@ Members who are not using an Enterprise or Trial account can request access to t
 
 ## <span class="customTOCSectionHeading">Installation - Beta</span>
 
- **Anybody running version 2.2 or higher of the Smartsheet for Salesforce App will also have access to the [Data Manager features](#data-manager---beta)**, no additional installation steps are required to use the beta features.
+ **Anybody running version 2.2 or higher of the Smartsheet for Salesforce App will also have access to the [Data Manager features](#data-manager---beta), no additional installation steps are required to use the beta features.**
 
-<aside class="notice">All beta functionality is automatically included in the <a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4">Smartsheet for Salesforce</a>. As long as you are running version 2.2 or higher, you will have access to the beta features. In order to access these features you will first need to complete the <a href="#enrollment">enrollment</a> process.</aside>
+<aside class="notice">While beta features are included in version 2.2 or higher of the <a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4">Smartsheet for Salesforce app</a>, you will need to complete the <a href="#enrollment">enrollment</a> process before you can access them.</aside>
 
 Please follow the steps found [here](#installation) to install the Data Manager feature.
 
@@ -365,9 +372,9 @@ Please follow the steps found [here](#installation) to install the Data Manager 
 
 The Smartsheet for Salesforce package contains two sets of features:
 
-1. The "legacy" features which allow linking sheets to standard or custom objects (via related lists). **These "legacy" features are production quality and are not the focus of this private beta program - they have not changed and continue to work as before**. If you are interested in using these features, your Salesforce administrator must follow the [Smartsheet Installation Guide for Salesforce](#installation) (also found in our [AppExchange](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) listing under DETAILS tab > CUSTOMIZATION GUIDES section) to configure them. 
+* The "legacy" features which allow linking sheets to standard or custom objects (via related lists). **These "legacy" features are production quality and are not the focus of this private beta program - they have not changed and continue to work as before**. If you are interested in using these features, your Salesforce administrator must follow the [Smartsheet Installation Guide for Salesforce](#installation) (also found in our [AppExchange](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) listing under DETAILS tab > CUSTOMIZATION GUIDES section) to configure them. 
 
-2. Smartsheet Data Manager for Salesforce is a brand new set of capabilities that enables **data export to Smartsheet**, **import from Smartsheet**, and **two-way manual data updates**.  The private beta program is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
+* Smartsheet Data Manager for Salesforce is a brand new set of capabilities that enables **data export to Smartsheet**, **import from Smartsheet**, and **two-way manual data updates**.  The private beta program is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
 
 ## Accessing Data Manager
 
