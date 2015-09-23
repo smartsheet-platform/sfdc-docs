@@ -18,16 +18,7 @@ search: false
 
 When Smartsheet is integrated with Salesforce, users can link project sheets to accounts, contacts, opportunities, other CRM objects or any custom object for real-time collaboration on project tasks and related files and discussions.
 
-Starting with version 2.2, the Smartsheet for Salesforce app also includes the [Data Manager feature](#data-manager---beta) (currently in beta). Data Manager allows you to export Salesforce data to Smartsheet, import Smartsheet data into Salesforce, and save export and import configurations as reusable workflows that you can use any time.
-
-<aside class="notice">At this time, Data Manager provides a <b>manual-only</b> update experience (no automatic updates), but it’s the first step toward delivering a fully automatic update experience (target date TBD).</aside>
-
-Benefits of using the Data Manager include, but are not limited to, the following:
-
-* Use Smartsheet to publish selected Salesforce data and share with internal and external stakeholders for review and feedback.
-* Use Smartsheet as a light-weight data editing tool to make bulk changes to your Salesforce data. Example: export your selected Opportunities to Smartsheet, update, and import them back into Salesforce.
-* Enable your project managers and other stakeholders to view and update Salesforce data using Smartsheet.
-* Import your Smartsheet data into Salesforce so you can include it in your Salesforce reports.
+<%= partial "snippets/dataManagerOverview.md.erb" %>
 
 # Requirements
 
@@ -35,32 +26,34 @@ To use the Smartsheet for Salesforce app, there are a few requirements:
 
 * Smartsheet user license.
 * Access to Salesforce sandbox or production instance.
-* To access [Data Manager features](#data-manager---beta), you will need to have [Smartsheet for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) version 2.2 or later installed.
+* To access the [Data Manager](#data-manager---beta) feature, you will need to have [Smartsheet for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) version 2.2 or later installed.
 
-</br>
+<br/>
 
-**Smartsheet for Salesforce - Plans, Pricing, and Assistance:**
+**Smartsheet - Plans, Pricing, and Assistance:**
 
-After installing Smartsheet for Salesforce via the AppExchange, your users can start a <b>free 30-day trial</b> by launching Smartsheet from within Salesforce and creating their first sheet. If a user doesn't become licensed or upgrade their account after the trial expires, they will lose the ability to <b>create</b> sheets. They will continue to have access to sheets shared to them by other licensed users. 
+After installing Smartsheet for Salesforce via the AppExchange, your users can start a <b>free 30-day trial</b> of Smartsheet by launching Smartsheet from within Salesforce and creating their first sheet. 
+The user's email address (in Salesforce) serves as their email address for their Smartsheet account. 
+Any users on a Trial or Basic account can be can be absorbed into a multi-user or domain license at any time, should you choose to license Smartsheet for your organization.
 
-<aside class="notice">To find out more information on plans and pricing, please visit our <a href="https://www.smartsheet.com/pricing">Pricing</a> page. Smartsheet can be licensed for single or multiple users.</aside>
+If a user is neither added to an existing license nor elects to upgrade their account before their trial expires, he or she will lose the ability to <b>create</b> sheets. 
+They will continue to have access to sheets shared to them by other licensed users. 
 
-Each Smartsheet account is tied to a user's email address. Any users on a Trial or Basic account can be added into a multi-user account at any time.
+<aside class="notice">For information about Smartsheet plans and pricing, see our <a href="https://www.smartsheet.com/pricing">Pricing</a> page. Smartsheet can be licensed on a named user or domain-wide basis.</aside>
 
 <aside class="notice"><b>Note</b>: Smartsheet for Salesforce features are available with a paid Smartsheet subscription. <b>Only licensed users can create new sheets in Smartsheet</b>. All other users can link to and collaborate on sheets created by licensed users.</aside>
 
 # Support
 
-To learn more about Smartsheet, review licensing options, or general support on the Salesforce integration, you have a few options:
+To learn more about Smartsheet or review licensing options:
 
 * Visit our website at [www.smartsheet.com](https://www.smartsheet.com)
 * Browse our [help articles](http://help.smartsheet.com/)
 * E-mail [support@smartsheet.com](mailto:support@smartsheet.com)
 * Call us at (425) 283-1870
 
-For technical issues, error messages, or to report potential bugs, please send us a detailed message at [api@smartsheet.com](mailto:api@smartsheet.com).
-
-**Here are some things you should include in a support request:**
+For technical support of the Smartsheet for Salesforce app, please send us a detailed message at [api@smartsheet.com](mailto:api@smartsheet.com). 
+If reporting an issue, please include the following in your message:
 
 * Screenshots of the error message
 * Exact steps to reproduce the error
@@ -75,241 +68,278 @@ If you are a new user, please follow the steps below to install the Smartsheet f
 
 # Getting the App
 
-First, you need to get the Smartsheet for Salesforce application from Salesforce.com’s AppExchange. Go to the [Smartsheet listing](http://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) on Salesforce.com’s AppExchange.
+First, you need to get the Smartsheet for Salesforce app from Salesforce.com’s AppExchange. 
 
-Click **Get It Now**:
+<ol>
 
-<img src="images/gettingTheApp/1goToListing.png"></br></br>
+<li>
+Go to the <a href="http://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4" target="_blank">Smartsheet listing</a> on Salesforce.com’s AppExchange.<br/><br/>
+</li>
 
-<aside class="notice"><b>Note</b>: Please ensure you are logged in with your Salesforce <b>administrator</b> account using the Login or Register button in the page header.</aside>
+<li>
+Ensure you are logged in with your Salesforce <b>administrator</b> account using the Login or Register button in the page header.<br/><br/>
+</li>
 
-Select if you would like to install the Smartsheet for Salesforce application in your **Production** or **Sandbox** Salesforce environment:
+<li>
+Click <b>Get It Now</b>.<br/><br/>
+<img src="images/gettingTheApp/1goToListing.png"><br/><br/>
+</li>
 
-<img src="images/gettingTheApp/2getItNow.png"></br>
+</ol>
 
-# Terms and Conditions
+# Installing the App
 
-Read and accept the terms and conditions, and then click **Confirm and Install**:
+<ol>
+<li>
+Select if you would like to install the Smartsheet for Salesforce application in your <b>Production</b> or <b>Sandbox</b> Salesforce environment.<br/><br/>
+<img src="images/gettingTheApp/2getItNow.png"><br/><br/><br/>
+</li>
 
-<img src="images/gettingTheApp/3confirmInstall.png"></br>
+<li>
+Read and accept the terms and conditions, and then click <b>Confirm and Install</b>.<br/><br/>
+<img src="images/gettingTheApp/3confirmInstall.png"><br/><br/><br/>
+</li>
 
-# Install Smartsheet for Salesforce
+<li>
+Select <b>Install for All Users</b> and click <b>Install</b>. (To view a list of permissions for the package, click on <b>API Access</b>.)<br/><br/>
+<img src="images/gettingTheApp/4install.png"><br/><br/><br/>
+</li>
 
-After redirecting, log into your Salesforce admin account and:
+<li>
+Select <b>Yes, grant access to these third-party web sites</b> option, and then click <b>Continue</b>.<br/><br/>
+<img src="images/gettingTheApp/5approveThirdPartyAccess.png"><br/><br/>
+<aside class="notice"><b>Note</b>: This window does not appear if you are upgrading from an earlier version of the Smartsheet for Salesforce application.</aside><br/><br/>
+</li>
 
-1. Select **Install for All Users**
-2. Click **Install**
-
-<aside class="notice"><b>Note</b>: To view a list of permissions for the package, click on <b>API Access</b>.</aside>
-
-<img src="images/gettingTheApp/4install.png"></br>
-
-# Third-Party Access
-
-Select **Yes, grant access to these third-party web sites** option, and then click **Continue**:
-
-<aside class="notice"><b>Note</b>: This window does not appear if you are upgrading from an earlier version of the Smartsheet for Salesforce application.</aside>
-
-<img src="images/gettingTheApp/5approveThirdPartyAccess.png"></br>
-
-# Finish Installation
-
-Once the installation has completed, you will see a confirmation page. Click on **Done**:
-
+<li>
+Once the installation has completed, click on <b>Done</b> on the confirmation page.<br/><br/>
 <img src="images/gettingTheApp/6installComplete.png">
+</li>
+</ol>
 
-</br>
+<br/>
 
-NOTE: If you want to test or customize the Smartsheet Integration package before it is visible to end users, go to: 
-
-1. **Setup** > **Create** > **Objects**
-2. Click **Edit** next to the Smartsheet object
-3. Under **Deployment Status**, click **In Development**, and then click Save. 
-
-This prevents users who are not administrators from seeing the Smartsheet Integration features until you return and change the deployment status to Deployed. However, **as an administrator**, you will be able to see the Smartsheet object and related pages, and perform the necessary customization steps in the remainder of this document.
+<aside class="notice">
+<b>Note:</b> If you want to test or customize the Smartsheet Integration package before it is visible to end users:
+<ol>
+<li>Go to <b>Setup</b> > <b>Create</b> > <b>Objects</b>.</li>
+<li>Click <b>Edit</b> next to the Smartsheet object.</li>
+<li>Under <b>Deployment Status</b>, click <b>In Development</b>, and then click <b>Save</b>.</li>
+</ol>
+This prevents users who are not administrators from seeing the Smartsheet Integration features until you return and change the deployment status to Deployed. However, <b>as an administrator</b>, you will be able to see the Smartsheet object and related pages, and perform the necessary customization steps in the remainder of this document.
+</aside>
 
 # <span class="customTOCSectionHeading">Configuration</span>
 
 This section covers the process to configure Smartsheet within Salesforce. These steps are recommended in order to provide the best experience possible.
 
-# Custom Field Relationships
+# Set Custom Field Relationships
+
+By default, Smartsheet for Salesforce allows you to relate Smartsheets to the standard Account, Opportunity, Contact, or Case objects in Salesforce. 
+If you do not need to relate Smartsheets to other types of Salesforce objects, you can skip this section.
+
+If you want the ability to relate Smartsheets to other types of Salesforce objects, you must create a relationship between the Smartsheet object and the other object types. 
+This section of the documentation describes that process. 
+
+<br/><b><u>To create a relationship between the Smartsheet object and another object type</u>:</b><br/><br/>
+
+<ol>
+<li>
+Go to <b>Setup</b> > <b>Create</b> > <b>Objects</b>.<br/><br/>
+</li>
+
+<li>
+On the <b>Custom Objects</b> page, click <b>Smartsheet</b>. The <b>Smartsheet</b> object page appears:<br/><br/>
+<img src="images/customFieldRelationships/1customObjects.png"><br/><br/><br/>
+</li>
+
+<li>
+Click <b>Custom Fields & Relationships</b>, then click <b>New</b>:<br/><br/>
+<img src="images/customFieldRelationships/2smartsheet.png"><br/><br/><br/>
+</li>
+
+<li>
+Select the <b>Lookup Relationship</b> option, then click <b>Next</b>.<br/><br/>
+<img src="images/customFieldRelationships/3customField.png"><br/><br/><br/>
+</li>
+
+<li>
+From the <b>Related To</b> list, choose the object to which you want to link Smartsheets, then click <b>Next</b>.<br/>
+(In this example, we will use the <b>Product</b> object.)<br/><br/>
+<img src="images/customFieldRelationships/4chooseRelationship.png"><br/><br/><br/>
+</li>
+
+<li>
+Fill in the <b>Field Label</b>, <b>Field Name</b>, and <b>Child Relationship Name</b> fields, then click <b>Next</b>.<br/><br/>
+<img src="images/customFieldRelationships/5newRelationship.png"><br/>
+<aside class="notice"><b>Note</b>: It is recommended that you use the default values, which are the object name for the field label and field name, and "<b>Smartsheets</b>" for the child relationship name.</aside><br/><br/>
+</li>
+
+<li>
+Choose the appropriate field-level security for your new lookup field, then click <b>Next</b>.<br/><br/>
+<img src="images/customFieldRelationships/6newRelationship_2.png"><br/><br/><br/>
+</li>
+
+<li>
+Confirm the default settings, then click <b>Next</b>.<br/><br/>
+<img src="images/customFieldRelationships/7newRelationship_3.png"><br/>
+<aside class="notice"><b>Note</b>: This step and screenshot will only appear for <b>Enterprise Edition</b> or higher.</aside><br/><br/>
+</li>
+
+<li>
+Accept or change the default related list label of <b>Smartsheets</b>, then click <b>Save</b>. You have now enabled the linking of Smartsheets to the selected object.<br/><br/>
+<img src="images/customFieldRelationships/8newRelationship_4.png"><br/><br/><br/>
+</li>
+</ol>
+
+<aside class="success">Repeat steps 1-9 for each additional object where you want to add a Smartsheets related list. As mentioned earlier, <b>this is not necessary for the Account, Opportunity, Contact, or Case objects</b>.</aside>
+
+# Add Smartsheets Related List
+
+Use the steps below to add a **Smartsheets** related list to the page layout(s) for standard Salesforce objects or for custom objects.
+
+<ol>
+
+<li>
+For a <b>standard</b> Salesforce object:
+<ul>
+<li>Go to <b>Setup</b> > <b>Customize</b> > <b>Accounts</b> > <b>Page Layouts</b>.</li>
+<li>Click <b>Edit</b> next to the page layout you want to change (e.g. Account (Sales) layout).<br/><br/></li>
+</ul>
+</li>
+
+<li>
+For a <b>custom</b> object:
+<ul>
+<li>Go to <b>Setup</b> > <b>Create</b> > <b>Objects</b>.</li>
+<li>Click the label for the custom object.</li>
+<li>In the <b>Page Layouts</b> section, click <b>Edit</b> next to the page layout you want to change.<br/><br/>
+<img src="images/smartsheetRelatedLists/1edit.png"><br/><br/><br/>
+</li>
+</ul>
+</li>
+
+<li>
+Click <b>Related Lists</b> on the left side of the page header.<br/><br/>
+<img src="images/smartsheetRelatedLists/2relatedLists.png"><br/><br/><br/>
+</li>
+
+<li>
+Drag the <b>Smartsheets</b> related list from the list picker in the page header to the desired location in your page layout.<br/><br/>
+<img src="images/smartsheetRelatedLists/3dragSmartsheets.png"><br/>
+<aside class="notice"><b>Note</b>: If the <b>Smartsheets</b> related list is already in the page layout, just click on the Smartsheets list in the list picker to scroll to the list in the page layout.</aside><br/>
+</li>
+
+<li>
+In the page layout, click the <b>wrench icon</b> next to the <b>Smartsheets</b> list you just dragged.<br/><br/><br/>
+</li>
+
+<li>
+Configure Columns for the related list:<br/><br/>
+<ul>
+<li>
+In the <b>Available Fields</b> list, click <b>Description</b>, and then click the <b>Add button (right arrow)</b> to add it.<br/><br/>
+<img src="images/smartsheetRelatedLists/4relatedListProperties.png"><br/><br/><br/>
+</li>
+</ul>
+</li>
 
-Next, you must create a relationship between the Smartsheet object and other objects within Salesforce.com. This allows you to have a Smartsheet related list on another object.
+<li>
+Configure Buttons for the related list:<br/><br/>
+<ul>
+<li>Click the <b>+ (plus)</b> icon on the right side of the <b>Buttons</b> section to expand the Button properties.</li>
+<li>Click <b>Link Existing Smartsheet</b> and <b>Launch Smartsheet</b> from the Available Buttons list.</li>
+<li>Click the <b>Add button (right arrow)</b>.</li>
+<li>Click the <b>Launch Smartsheet</b> button in the <b>Selected Buttons</b> list.</li>
+<li>Click the <b>Down button (down arrow)</b> to move it after the <b>Link Existing Smartsheet</b> button.</li> 
+<li>Click <b>OK</b>.<br/><br/></li>
+</ul>
+<img src="images/smartsheetRelatedLists/5buttons.png"><br/><br/><br/>
+</li>
 
-<aside class="notice"><b>Note</b>: You can skip this section if you want to relate Smartsheets only to the standard Account, Opportunity, Contact, or Case objects. The ability to link a Smartsheet to these objects is included by default.</aside>
+<li>
+Click <b>Save</b>.<br/><br/>
+</li>
 
-## Custom Object Definition Detail
+<li>
+You may be prompted to overwrite users' personal related list customizations.<br/><br/> 
+<img src="images/smartsheetRelatedLists/6overwrite.png"><br/><br/>
+<ul>
+<li>Select <b>Yes</b> if you want the users to see the new <b>Smartsheets</b> related list you just added.<br/><br/></li>
+<li>If you answer <b>No</b>, users who have customized their related lists must manually add the <b>Smartsheets</b> related list.<br/><br/></li>
+</ul>
+</li>
 
-1. Go to **Setup** > **Create** > **Objects**
-4. Click on **Smartsheet**
+</ol>
 
-You'll see this page:
+<aside class="success">Repeat steps 1-9 for each page layout where you want to enable Smartsheet integration.</aside>
 
-<img src="images/customFieldRelationships/1customObjects.png"></br></br>
+# Add link to Home Page sidebar
 
-Under **Custom Fields & Relationships**, click **New**:
+This is an optional step that gives your users an easy way to open Smartsheet by adding a <b>Launch Smartsheet</b> link to the Home Page sidebar.
 
-<img src="images/customFieldRelationships/2smartsheet.png"></br></br>
+<br/><b><u>To add a <b>Launch Smartsheet</b> link to the Home Page sidebar</u>:</b><br/><br/>
 
-## Create a Relationship
+<ol>
 
-Select the **Lookup Relationship** button, then click **Next** at the bottom of the page:
+<li>
+Under <b>Setup</b>, select <b>Customize</b> > <b>Home</b> > <b>Home Page Layouts</b>.<br/><br/>
+</li>
 
-<img src="images/customFieldRelationships/3customField.png"></br></br>
+<li>
+Click <b>Edit</b> next to the home page layout you want to change.<br/><br/>
+<img src="images/homepage/1homePageLayouts.png"><br/><br/><br/>
+</li>
 
-From the **Related To** list, choose the object to which you want to link Smartsheets, then click **Next**:
+<li>
+Select the checkbox for Smartsheet, then click <b>Next</b>.<br/><br/>
+<img src="images/homepage/2editHomePage.png"><br/><br/><br/>
+</li>
 
-<aside class="notice"><b>Note</b>: in this example, we will use the "<b>Product</b>" object.</aside>
+<li>
+(Optional) Reorder the Smartsheet component, then click <b>Save</b>.<br/><br/>
+<img src="images/homepage/3reorderLayout.png"><br/><br/>
+</li>
 
-<img src="images/customFieldRelationships/4chooseRelationship.png"></br></br>
+</ol>
 
-## Filling in Label Information
+<aside class="success">If necessary, repeat steps 2-4 for other home page layouts.</aside>
 
-Fill in the **Field Label**, **Field Name**, and **Child Relationship Name** fields, then click **Next**:
+# Hide the Application & Tab
 
-<aside class="notice"><b>Note</b>: It is recommended that you use the default values, which are the object name for the field label and field name, and "<b>Smartsheets</b>" for the child relationship name.</aside>
+Since Smartsheet for Salesforce is mainly used to link Smartsheets to other objects in Salesforce, we recommend following these steps to hide the Smartsheet for Salesforce application and <b>Smartsheets</b> tab from users.
 
-<img src="images/customFieldRelationships/5newRelationship.png"></br></br>
+<aside class="notice"><b>Note</b>: This configuration is only available in <b>Enterprise</b> or <b>Unlimited</b> Editions of Salesforce. <b>Group</b> and <b>Professional</b> Editions of Salesforce do not have custom profiles enabled.</aside>
 
-## Field-Level Security
+<br/><b><u>To hide the Smartsheet for Salesforce application and tab:</u>:</b><br/><br/>
 
-Choose the appropriate field-level security for your new lookup field, then click **Next**:
+<ol>
 
-<aside class="notice"><b>Note</b>: This step and screenshot will only appear for <b>Enterprise Edition</b> or higher.</aside>
+<li>
+Within <b>Administration Setup</b>, select <b>Manage Users</b> > <b>Profiles</b>.<br/><br/>
+</li>
 
-<img src="images/customFieldRelationships/6newRelationship_2.png"></br></br>
+<li>
+Click <b>Edit</b> next to the profile that you want to configure.<br/><br/>
+<img src="images/hiding/1userProfiles.png"></b><br/><br/><br/>
+</li>
 
-## Confirm Settings
+<li>
+Under <b>Custom App Settings</b>, clear the <b>Smartsheet</b> checkbox.<br/><br/>
+</li>
 
-Confirm the default settings, then click **Next**:
+<li>
+Under <b>Tab Settings</b>, change the <b>Smartsheets</b> dropdown to <b>Tab Hidden</b>.<br/><br/>
+<img src="images/hiding/2editProfile.png"><br/><br/><br/>
+</li>
 
-<img src="images/customFieldRelationships/7newRelationship_3.png"></br></br>
+<li>
+Click <b>Save</b>.<br/><br/>
+</li>
 
-Accept or change the default related list label of **Smartsheets**, then click **Save**. You have now enabled the linking of Smartsheets to the selected object:
+</ol>
 
-<img src="images/customFieldRelationships/8newRelationship_4.png"></br></br>
-
-<aside class="notice"><b>Note</b>: Repeat steps 1-9 for each additional object where you want to add a Smartsheets related list. As mentioned earlier, <b>this is not necessary for the Account, Opportunity, Contact, or Case objects</b>.</aside>
-
-
-# Smartsheet-Related Lists
-
-This section covers adding a Smartsheets related list to the page layout(s) for standard Salesforce objects, or for custom objects.
-
-## Edit Page Layout
-
-For a **standard** Salesforce object, go to:
-
-1. **Setup** > **Customize** > **Accounts** > **Page Layouts**
-5. Click **Edit** next to the page layout you want to change (e.g. Account (Sales) layout).
-
-For a **custom** object, go to:
-
-1. **Setup** > **Create** > **Objects**
-4. Click on the label for your custom object
-5. Click **Edit** next to the page layout you want to change.
-
-<img src="images/smartsheetRelatedLists/1edit.png"></br></br>
-
-Click **Related Lists** on the left side of the page header:
-
-<img src="images/smartsheetRelatedLists/2relatedLists.png"></br></br>
-
-Drag the **Smartsheets** related list from the list picker in the page header to an appropriate place in your page layout:
-
-<aside class="notice"><b>Note</b>: If this Smartsheets related list is already in the page layout, click on the Smartsheets list in the list picker to scroll to it in the page layout.</aside>
-
-<img src="images/smartsheetRelatedLists/3dragSmartsheets.png"></br></br>
-
-## Related List Properties
-
-In the page layout:
-
-1. click the **wrench icon** next to the **Smartsheets** list you just dragged.
-2. In the **Available Fields** list, click **Description**, and then click the **Add button (right arrow)** to add it:
-
-<img src="images/smartsheetRelatedLists/4relatedListProperties.png"></br></br>
-
-1. Click the **+ (plus)** icon on the right side of the **Buttons** section to expand the Button properties. 
-2. Click **Link Existing Smartsheet** and **Launch Smartsheet** from the Available Buttons list
-3. Click the **Add button (right arrow)**
-
-Then:
-
-1. Click the **Launch Smartsheet** button in the **Selected Buttons** list
-2. Click the **Down button (down arrow)** to move it after the **Link Existing Smartsheet** button. 
-3. Then click **OK**
-
-<img src="images/smartsheetRelatedLists/5buttons.png"></br></br>
-
-Click **Save**.
-
-</br>
-
-## Overwrite Users' Customizations
-
-You may be prompted to overwrite users’ personal related list customizations. Select **Yes** if you want the users to see the new Smartsheets related list you just added. 
-
-<aside class="notice"><b>Note</b>: If you answer <b>No</b>, users who have customized their related lists must manually add the Smartsheets related list.</aside>
-
-<img src="images/smartsheetRelatedLists/6overwrite.png"></br></br>
-
-**Repeat steps 1-9 for each page layout where you want to enable Smartsheet integration.**
-
-# Add to the Homepage (Optional)
-
-This is an optional step that gives your users an easy way to open Smartsheet by adding a Launch Smartsheet link to their Home Page sidebar.
-
-Under **Setup**:
-
-1. Select **Customize** > **Home** > **Home Page Layouts**
-4. Click **Edit** next to the home page layout you want to change
-
-<img src="images/homepage/1homePageLayouts.png"></br></br>
-
-</br>
-
-Select the checkbox for Smartsheet, and then click **Next**.
-
-<img src="images/homepage/2editHomePage.png"></br></br>
-
-</br>
-
-**Optional**: Reorder the Smartsheet component, then click **Save**:
-
-<img src="images/homepage/3reorderLayout.png"></br></br>
-
-</br>
-
-**If necessary, apply the same changes to other home page layouts.**
-
-
-# Hiding the Application & Tab
-
-Since Smartsheet for Salesforce is mainly used to link Smartsheets to other objects in Salesforce, we recommend following these steps to hide the Smartsheet for Salesforce application and Smartsheets tab from users.
-
-<aside class="notice"><b>NOTE</b>: This configuration is only available in Enterprise or Unlimited Editions of Salesforce. <b>Group</b> and <b>Professional Editions</b> do not have custom profiles enabled.</aside>
-
-To Hide the Smartsheet for Salesforce application and tab:
-
-Within **Administration Setup**, select:
-
-1. **Manage Users** > **Profiles**
-3. Click **Edit** next to whatever profile you are configuring.
-
-
-<img src="images/hiding/1userProfiles.png"></b></br>
-
-</br>
-
-
-1. Under **Custom App Settings**, clear the **Smartsheet** checkbox.
-2. Under **Tab Settings**, change the **Smartsheets** dropdown to **Tab Hidden**.
-3. Click **Save**
-
-<img src="images/hiding/2editProfile.png"></br></br>
-
-**Repeat these changes for other profiles as needed.**
+<aside class="success">Repeat steps 2-5 for other profiles as needed.</aside>
 
 <aside class="notice"><b>Tip</b>: You can skip the tab setting change for non-custom profiles, since non-custom profiles can never see custom object tabs.</aside>
 
@@ -319,18 +349,20 @@ Within **Administration Setup**, select:
 
 You may encounter this error message when attempting to use the Smartsheet for Salesforce App:
 
-<img src="images/FAQ/1errorCommunicating.png"></br></br>
+<img src="images/FAQ/1errorCommunicating.png"><br/><br/>
 
-If you see this error, it is because you are running version 1.5 or earlier of the Smartsheet for Salesforce app. In order to restore functionality, you will need to update to the latest version.
+If you see this error, it is because you are running version 1.5 or earlier of the Smartsheet for Salesforce app. In order to restore functionality, you will need to update to the latest version of the Smartsheet for Salesforce app.
 
 
 # <span class="customTOCSectionHeading">Data Manager - Beta</span>
 
+<%= partial "snippets/dataManagerOverview.md.erb" %>
+
 ## Private Beta
 
-### What is private beta?
-
-Private beta is a limited enrollment program during which we will work with a select group of Smartsheet customers to test and improve our Data Manager for Salesforce. Participants will not only get early access to the app, but will also help us shape its roadmap.
+The Data Manager feature is currently available via private beta only. 
+Private beta is a limited enrollment program during which we will work with a select group of Smartsheet customers to test and improve our Data Manager for Salesforce. 
+Participants will not only get early access to the app, but will also help us shape its roadmap.
 
 ### How long will the private beta last?
 
@@ -346,47 +378,48 @@ Before we release our app to the public, we want to make sure it is stable, perf
 * Are willing to invest the time in testing the software.
 * Are willing to provide feedback on usability, defects or performance.
 
-Current Smartsheet customers can apply to participate (see [the next section](#enrollment) for enrollment instructions).  We will review your application and let you know whether you are a good fit for the private beta.
+Current Smartsheet customers can apply to participate in the private beta (see [the next section](#private-beta-enrollment) for enrollment instructions). 
 
-## Enrollment
+## Private Beta Enrollment
 
-<aside class="notice">If you are on an Enterprise or Trial account you <b>do not</b> need to enroll, access to the Smartsheet Data Manager for Salesforce is enabled by default.</aside>
+<aside class="notice">Smartsheet users who belong to either an Enterprise account or Trial account <b>do not</b> need to enroll in the private beta. Access to the Data Manager feature of the Smartsheet for Salesforce app is enabled by default for these types of accounts.</aside>
 
-Members who are not using an Enterprise or Trial account can request access to the Beta by using the [online signup form](https://app.smartsheet.com/b/form?EQBCT=cecacfac4ecf46a2a3317f8cbd9fea48). If approved, this will enable access to Smartsheet Data Manager for Salesforce during its beta phase. **Public release will be limited to Enterprise plans only**.
+Smartsheet users who do not belong to an Enterprise account or Trial account can request access to the private beta by using the [online signup form](https://app.smartsheet.com/b/form?EQBCT=cecacfac4ecf46a2a3317f8cbd9fea48). 
+We will review your application and let you know whether you are a good fit for the private beta. 
+If approved, this will enable access to the Data Manager feature of the Smartsheeet for Salesforce app during its beta phase. **Public release will be limited to Enterprise accounts only.**
 
 ## Requirements
 
 * Smartsheet [user license](http://help.smartsheet.com/customer/portal/articles/520100-user-types#licenseduser).
 * Access to Salesforce sandbox or production instance.
-* [Smartsheet for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4), version 2.2 or later.
+* [Smartsheet for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) version 2.2 or later.
 
 ## <span class="customTOCSectionHeading">Installation - Beta</span>
 
- **Anybody running version 2.2 or higher of the Smartsheet for Salesforce App will also have access to the [Data Manager features](#data-manager---beta), no additional installation steps are required to use the beta features.**
+Version 2.2 (and higher) of the Smartsheet for Salesforce app includes the [Data Manager](#data-manager---beta) feature. 
+For information about installing the Smartsheet for Salesforce app, see [Installation](#installation).
 
-<aside class="notice">While beta features are included in version 2.2 or higher of the <a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4">Smartsheet for Salesforce app</a>, you will need to complete the <a href="#enrollment">enrollment</a> process before you can access them.</aside>
-
-Please follow the steps found [here](#installation) to install the Data Manager feature.
+<aside class="notice">Smartsheet users belonging to an account type other than Enterprise or Trial must <a href="#private-beta-enrollment">enroll</a> in the private beta in order to access the Data Manager feature.</aside>
 
 ## <span class="customTOCSectionHeading">Configuration - Beta</span>
 
-The Smartsheet for Salesforce package contains two sets of features:
+The Smartsheet for Salesforce app (version 2.2 and higher) contains two sets of features:
 
-* The "legacy" features which allow linking sheets to standard or custom objects (via related lists). **These "legacy" features are production quality and are not the focus of this private beta program - they have not changed and continue to work as before**. If you are interested in using these features, your Salesforce administrator must follow the [Smartsheet Installation Guide for Salesforce](#installation) (also found in our [AppExchange](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) listing under DETAILS tab > CUSTOMIZATION GUIDES section) to configure them. 
+* The "legacy" features which allow linking sheets to standard or custom objects (via related lists). **These "legacy" features are production quality and are not the focus of the private beta program - they have not changed and continue to work as before**. If you are interested in using these features, your Salesforce administrator must follow the [Installation](#installation) and [Configuraton](#configuration) instructions as described earlier in this documentation. 
 
-* Smartsheet Data Manager for Salesforce is a brand new set of capabilities that enables **data export to Smartsheet**, **import from Smartsheet**, and **two-way manual data updates**.  The private beta program is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
+* The "Data Manager" feature is a brand new set of capabilities that enables **data export to Smartsheet**, **data import from Smartsheet**, and **two-way manual data updates**.  The Data Manager feature is available via a [private beta program](#private-beta) that is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
 
 ## Accessing Data Manager
 
-<aside class="notice">Once Smartsheet for Salesforce is installed in your Salesforce instance, you <b>don't</b> need to be a Salesforce administrator to use it.</aside>
+<aside class="notice">Once the Smartsheet for Salesforce app is installed in your Salesforce instance, you <b>do not</b> need to be a Salesforce administrator to use it.</aside>
 
 Navigate to the app menu and select **Smartsheet** from the dropdown:
 
-<img src="images/screenshots/platformSmartsheet.png" /></br></br>
+<img src="images/screenshots/platformSmartsheet.png" /><br/><br/>
 
 That will immediately take you to the Smartsheet Data Manager tab:
 
-<img src="images/screenshots/dataManager.png" /></br></br>
+<img src="images/screenshots/dataManager.png" /><br/><br/>
 
 ## Accepting the User Agreement
 
@@ -394,11 +427,11 @@ You will be asked to accept the private beta user agreement before proceeding:
 
 <aside class="notice">Note: This will only occur the first time you access the Data Manager.</aside>
 
-<img src="images/screenshots/userAgreement.png" /></br></br>
+<img src="images/screenshots/userAgreement.png" /><br/><br/>
 
 ## Connecting to Smartsheet
 
-Click on **Connect to Smartsheet** after you check the **Accept License Agreement** option, then follow the steps to authorize access between the app and your Smartsheet account.
+Click **Connect to Smartsheet** after you check the **Accept License Agreement** box, then follow the steps to authorize access between the app and your Smartsheet account.
 
 ## <span class="customTOCSectionHeading">Usage - Beta</span>
 
@@ -408,39 +441,39 @@ Click on **Connect to Smartsheet** after you check the **Accept License Agreemen
 
 The Data Manager default view is the Dashboard that includes buttons to create new Export or Import workflows, the list of existing workflows (if any), and the History tab: 
 
-<img src="images/screenshots/dataManagerDashboard.png" /></br></br> 
+<img src="images/screenshots/dataManagerDashboard.png" /><br/><br/> 
 
 ## Creating a New Workflow
 
-To create an export or import workflow, click on either the **New Export** or “**New Import**” button. A workflow wizard will pop-up and list 5 steps to create the new workflow.  Proceed through the 5 steps in the wizard. At the end of the process, your new export or import will be immediately queued up for execution.
+To create an export or import workflow, click either the **New Export** or **New Import** button, then proceed through the 5 steps of the wizard to create the new workflow. 
+At the end of the process, your new export or import workflow will be immediately queued up for execution.
 
-<aside class="notice">Note: After you've created a new workflow, it is automatically saved as a reusable workflow to your Dashboard</aside>
+<aside class="notice">Note: After you've created a new workflow, it is automatically saved as a reusable workflow to your Dashboard.</aside>
 
-<img src="images/screenshots/createNewWorkflow.png" /></br></br>
-
-## Workflow Status and History
-
-<aside class="notice">The history tab on the Dashboard will list every workflow that is currently queued or has previously processed. It will also display warnings or error messages if the workflow did not process correctly.</aside>
-
-When checking the status of a job that is currently processing use the refresh icon, next to the History tab, to update the listings:
-
-<img src="images/screenshots/checkStatus.png" /></br></br>
+<img src="images/screenshots/createNewWorkflow.png" /><br/><br/>
 
 ## Running an Existing Workflow
 
-Once you create a workflow, you can run it any time from your Dashboard to update the mapped fields in your destination with the most current data from your source:
+Once you create a workflow, you can run it any time from your Dashboard to update the mapped fields in the specified destination with the most current data from the specified source.
 
-<aside class="warning"><b>IMPORTANT</b>: When you run an existing workflow, it <b>will overwrite</b> the mapped fields in your destination with the most current data from your source.</aside>
+<aside class="warning"><b>IMPORTANT</b>: When you run an existing workflow, it will <b>overwrite</b> the mapped fields in the specified destination with the most current data from the specified source.</aside>
 
-
-<img src="images/screenshots/runExistingWorkflow.png" /></br></br>
-
+<img src="images/screenshots/runExistingWorkflow.png" /><br/><br/>
 
 ## Modifying an Existing Workflow
 
-You can modify an existing workflow (e.g., map additional fields, add filters, etc.) without running it by clicking on the adjacent gear icon:
+You can modify an existing workflow (e.g., map additional fields, add filters, etc.) without running it by clicking on the adjacent gear icon.
 
-<img src="images/screenshots/modifyExistingWorkflow.png" /></br></br>
+<img src="images/screenshots/modifyExistingWorkflow.png" /><br/><br/>
+
+## Workflow Status and History
+
+The History tab on the Dashboard lists every workflow that is currently queued or has previously executed. 
+It will also display warnings or error messages if a workflow did not process correctly.
+
+<aside class="notice">Use the refresh icon (located next to the History tab) to update the status of workflows that are currently processing.</aside>
+
+<img src="images/screenshots/checkStatus.png" /><br/><br/>
 
 ## <span class="customTOCSectionHeading">FAQ - Beta</span>
 
@@ -448,6 +481,7 @@ You can modify an existing workflow (e.g., map additional fields, add filters, e
 
 After you attempt to **Connect to Smartsheet** from within the Data Manager, you may see this error message:
 
-<img src="images/screenshots/faq1.png" /> </br></br>
+<img src="images/screenshots/faq1.png" /> <br/><br/>
 
-If you see this message, it's because your Smartsheet account has not been [enrolled](#enrollment) in Salesforce integration access.  Please remember that your Smartsheet account must be enrolled to participate in the private beta.  Furthermore, you must be a licensed Smartsheet user to use the integration.  Please see the [Requirements](#requirements) section in this document for more information, or contact us at [api@smartsheet.com](mailto:api@smartsheet.com) for help with [private beta enrollment](#enrollment), or if you believe this is in error.
+If you see this message, it's because your Smartsheet account has not been enrolled in the [private beta program](#private-beta) for the Data Manager feature. 
+Please see the [Private Beta Enrollment](#private-beta-enrollment) section for more information, or contact us at [api@smartsheet.com](mailto:api@smartsheet.com) if you believe this message is in error.
