@@ -1,11 +1,11 @@
-# Smartsheet Data Manager for Salesforce User Guide
+# Smartsheet for Salesforce User Guide
 
-Documentation source files for the [Smartsheet Data Manager for Salesforce](http://www.smartsheet.com/developers/sfdc).
+Documentation source files for the [Smartsheet for Salesforce](http://www.smartsheet.com/developers/sfdc).
 
 ## Purpose
 
-This repository contains the source files used to generate the documentation for the Smartsheet Data Manager for Salesforce.
-The actual Smartsheet Data Manager for Salesforce documentation can be viewed [here](http://smartsheet-platform.github.io/sfdc-docs). 
+This repository contains the source files used to generate the documentation for the Smartsheet for Salesforce app.
+The actual Smartsheet for Salesforce documentation can be viewed [here](http://smartsheet-platform.github.io/sfdc-docs). 
 
 ## Submitting Feedback
 
