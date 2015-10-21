@@ -12,7 +12,7 @@ search: false
 
 # <span class="customTOCSectionHeading">Getting Started</span>
 
-<aside class="notice">Last updated: 09/21/2015</aside>
+<aside class="notice">Last updated: 10/20/2015</aside>
 
 # Overview
 
@@ -451,6 +451,36 @@ At the end of the process, your new export or import workflow will be immediatel
 <aside class="notice">Note: After you've created a new workflow, it is automatically saved as a reusable workflow to your Dashboard.</aside>
 
 <img src="images/screenshots/createNewWorkflow.png" /><br/><br/>
+
+### Insert vs Update Logic
+
+Data manager provides the ability to create new records or update existing records in Salesforce. When creating or modifying a workflow, you must map the Salesforce object ID field to a column in Smartsheet that is designated for Salesforce record IDs ("**ID column**"). 
+
+Workflows use the following rules to determine whether a record should be **created** or **updated** in Salesforce:
+
+* If a row in the "ID Column" is **empty**, then a new record is created in Salesforce for that Row.
+* If a row in the "ID Column" **contains data**, then Data Manager assumes a matching  record (with that record ID) already exists in Salesforce and attempts to update it.
+
+<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step.  Even though the "ID Column" can be blank (for inserts). 
+</br></br>
+In the following  example, the required fields are:
+<ul>
+<li>Name</li>
+<li>StageName</li>
+<li>CloseDate</li>
+</ul>
+These fields will need data in the associated Columns in Smartsheet, otherwise the import will fail.
+</aside>
+
+Here’s the dialogue which prompts you to map your Smartsheet Columns and Salesforce Fields. You can see we’ve mapped the **ID** Column in Smartsheet to the **Opportunity ID** Field in Salesforce:
+
+<aside class="success">Note: We chose to import an <b>Opportunity</b> from Smartsheet into Salesforce for this example.</aside>
+
+<img src="images/screenshots/mapID.png" /> </br></br>
+
+Our **ID** Column will **update** 2 Records, and **create** 1 Record (by leaving the ID blank):
+
+<img src="images/screenshots/createRecord.png" /> </br></br>
 
 ## Running an Existing Workflow
 
