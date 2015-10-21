@@ -528,7 +528,7 @@ At the end of the process, your new export or import workflow will be immediatel
 <li>If a row in the &ldquo;ID Column&rdquo; <strong>contains data</strong>, then Data Manager assumes a matching  record (with that record ID) already exists in Salesforce and attempts to update it.</li>
 </ul>
 
-<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step.  Even though the &ldquo;ID Column&rdquo; can be blank (for inserts). 
+<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step even though the &ldquo;ID Column&rdquo; can be blank (for inserts). 
 </br></br>
 In the following  example, the required fields are:
 <ul>
@@ -545,7 +545,7 @@ These fields will need data in the associated Columns in Smartsheet, otherwise t
 
 <p><img src="images/screenshots/mapID.png" /> </br></br></p>
 
-<p>Our <strong>ID</strong> Column will <strong>update</strong> 2 Records, and <strong>create</strong> 1 Record (by leaving the ID blank):</p>
+<p>Based on the &ldquo;ID Column&rdquo; in the screenshot below, Data Manager will <strong>update</strong> the first 2 records, and <strong>create</strong> 1 new record (because the last row contains no data):</p>
 
 <p><img src="images/screenshots/createRecord.png" /> </br></br></p>
 
