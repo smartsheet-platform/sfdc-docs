@@ -43,7 +43,7 @@
 		  <div class="content">
 			<h1 id="getting-started"><span class="customTOCSectionHeading">Getting Started</span></h1>
 
-<aside class="notice">Last updated: 09/24/2015</aside>
+<aside class="notice">Last updated: 10/20/2015</aside>
 
 <h1 id="overview">Overview</h1>
 
@@ -516,6 +516,38 @@ At the end of the process, your new export or import workflow will be immediatel
 <aside class="notice">Note: After you&rsquo;ve created a new workflow, it is automatically saved as a reusable workflow to your Dashboard.</aside>
 
 <p><img src="images/screenshots/createNewWorkflow.png" /><br/><br/></p>
+
+<h3 id="insert-vs-update-logic">Insert vs Update Logic</h3>
+
+<p>Data manager provides the ability to create new records or update existing records in Salesforce. When creating or modifying a workflow, you must map the Salesforce object ID field to a column in Smartsheet that is designated for Salesforce record IDs (&ldquo;<strong>ID column</strong>&rdquo;). </p>
+
+<p>Workflows use the following rules to determine whether a record should be <strong>created</strong> or <strong>updated</strong> in Salesforce:</p>
+
+<ul>
+<li>If a row in the &ldquo;ID Column&rdquo; is <strong>empty</strong>, then a new record is created in Salesforce for that Row.</li>
+<li>If a row in the &ldquo;ID Column&rdquo; <strong>contains data</strong>, then Data Manager assumes a matching  record (with that record ID) already exists in Salesforce and attempts to update it.</li>
+</ul>
+
+<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step.  Even though the &ldquo;ID Column&rdquo; can be blank (for inserts). 
+</br></br>
+In the following  example, the required fields are:
+<ul>
+<li>Name</li>
+<li>StageName</li>
+<li>CloseDate</li>
+</ul>
+These fields will need data in the associated Columns in Smartsheet, otherwise the import will fail.
+</aside>
+
+<p>Here’s the dialogue which prompts you to map your Smartsheet Columns and Salesforce Fields. You can see we’ve mapped the <strong>ID</strong> Column in Smartsheet to the <strong>Opportunity ID</strong> Field in Salesforce:</p>
+
+<aside class="success">Note: We chose to import an <b>Opportunity</b> from Smartsheet into Salesforce for this example.</aside>
+
+<p><img src="images/screenshots/mapID.png" /> </br></br></p>
+
+<p>Our <strong>ID</strong> Column will <strong>update</strong> 2 Records, and <strong>create</strong> 1 Record (by leaving the ID blank):</p>
+
+<p><img src="images/screenshots/createRecord.png" /> </br></br></p>
 
 <h2 id="running-an-existing-workflow">Running an Existing Workflow</h2>
 
