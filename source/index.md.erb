@@ -461,7 +461,7 @@ Workflows use the following rules to determine whether a record should be **crea
 * If a row in the "ID Column" is **empty**, then a new record is created in Salesforce for that Row.
 * If a row in the "ID Column" **contains data**, then Data Manager assumes a matching  record (with that record ID) already exists in Salesforce and attempts to update it.
 
-<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step.  Even though the "ID Column" can be blank (for inserts). 
+<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step even though the "ID Column" can be blank (for inserts). 
 </br></br>
 In the following  example, the required fields are:
 <ul>
@@ -478,7 +478,7 @@ Here’s the dialogue which prompts you to map your Smartsheet Columns and Sales
 
 <img src="images/screenshots/mapID.png" /> </br></br>
 
-Our **ID** Column will **update** 2 Records, and **create** 1 Record (by leaving the ID blank):
+Based on the "ID Column" in the screenshot below, Data Manager will **update** the first 2 records, and **create** 1 new record in Salesforce (because the last row contains no data):
 
 <img src="images/screenshots/createRecord.png" /> </br></br>
 
