@@ -12,7 +12,7 @@ search: false
 
 # <span class="customTOCSectionHeading">Getting Started</span>
 
-<aside class="notice">Last updated: 10/27/2015</aside>
+<aside class="notice">Last updated: 12/09/2015</aside>
 
 # Overview
 
@@ -443,6 +443,54 @@ You will be asked to accept the private beta user agreement before proceeding:
 ## Connecting to Smartsheet
 
 Click **Connect to Smartsheet** after you check the **Accept License Agreement** box, then follow the steps to authorize access between the app and your Smartsheet account.
+
+## Permissions Set for Non-Admin Users
+
+<aside class="notice">Users of the Smartsheet Data Manager need access permissions (Read, Create, Edit,  and Delete) to all custom objects contained in the package. Users with <b>System Administrator</b> profiles are automatically granted those permissions and therefore don’t require any further configuration to use the Smartsheet Data Manager.</aside>
+
+If non-admin users need to use the Smartsheet Data Manager then the **system administrator** should login to the organization and create a permission set as displayed in the pictures below (click on the New button and see the text entered in the second picture).</br></br> 
+
+<ol>
+
+<li>Once the permission set is created, click on the <b>Smartsheet Permissions</b> link (as seen in the picture below) in order to edit its settings:</li></br>
+
+<img src="images/nonAdmin/1.png" /> </br></br>
+
+<img src="images/nonAdmin/2.png" /> </br></br>
+
+<li>When the page below appears, click the <b>Object Settings</b> link:</li></br>
+
+<img src="images/nonAdmin/3.png" /> </br></br>
+
+<li>When the page below appears, click on each of the package’s object name (the ones starting with <b>DL_</b>) for example: <b>DL_ColumnToFieldMappings</b>, <b>DL_Configs</b>, etc.</li></br>
+
+<img src="images/nonAdmin/4.png" /> </br></br>
+
+<li> </br></br>
+
+<ul>
+<li>When the page below appears click the <b>Edit</b> button.</li>
+
+<li>Select the <b>Object Permission</b> checkboxes for <b>Read</b> <b>Create</b> <b>Edit</b>, <b>Delete</b> (as seen below).</li>
+
+<li>For the <b>Field Permissions</b> section, select all available checkboxes. Some checkboxes cannot be selected because you cannot edit some standard object fields in Salesforce (e.g. Created By, id, Last Modified By).</li>
+
+<li>When you finish selecting the Object Permissions and Field Permissions for <b>all custom objects in the package</b>, then click on the <b>Manage Assignments</b> button.</li></br>
+
+</ul>
+
+<img src="images/nonAdmin/5.png" /> </br></br>
+
+<li>When the page below appears, then click on the <b>Add Assignments</b> button:</li></br>
+
+<img src="images/nonAdmin/6.png" /> </br></br>
+
+<li>When the page below appears, select the users that need access to the Smartsheet Data Manager and then click the <b>Assign</b> button:</li></br>
+
+<img src="images/nonAdmin/7.png" /> </br></br>
+
+</ol>
+
 
 ## <span class="customTOCSectionHeading">Usage - Beta</span>
 
