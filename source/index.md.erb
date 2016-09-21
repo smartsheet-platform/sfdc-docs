@@ -12,13 +12,13 @@ search: false
 
 # <span class="customTOCSectionHeading">Getting Started</span>
 
-<aside class="notice">Last updated: 01/20/2016</aside>
+<aside class="notice">Last updated: 09/21/2016</aside>
 
 # Overview
 
 When Smartsheet is integrated with Salesforce, users can link project sheets to accounts, contacts, opportunities, other CRM objects or any custom object for real-time collaboration on project tasks and related files and discussions.
 
-<%= partial "snippets/dataManagerOverview.md.erb" %> </br>
+<aside class="warning">Data Manager has been retired and replaced with our new <b>Smartsheet for Salesforce</b> connector, which is currently in a private beta. To sign up for the beta, please fill out this <a href="https://app.smartsheet.com/b/form?EQBCT=b253a23e3c0042f6a8380952415b53fe">form</a>.</aside>
 
 ## Versioning
 
@@ -37,7 +37,6 @@ To use the Smartsheet for Salesforce app, there are a few requirements:
 
 * Smartsheet user license.
 * Access to Salesforce sandbox or production instance.
-* To access the [Data Manager](#data-manager---beta) feature, you will need to have [Smartsheet for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) version 2.2 or later installed.
 
 <br/>
 
@@ -113,11 +112,11 @@ Send us the **Salesforce.com Organization ID** that is listed in the right hand 
 
 If you are a new user, please follow the steps below to install the Smartsheet for Salesforce.
 
-<aside class="notice">For information on Data Manager requirements and installation, please see the <a href="#data-manager---beta">Data Manager</a> section.</aside>
-
 <aside class="warning"><b>Note</b>: It is recommended that existing users upgrade to the latest version of the application. <b>Anybody running version 1.5 or earlier will no longer be able to connect with Smartsheet until they update.</b></aside>
 
 # Getting the App
+
+<aside class="warning">Data Manager has been retired and replaced with our new <b>Smartsheet for Salesforce</b> connector, which is currently in a private beta. To sign up for the beta, please fill out this <a href="https://app.smartsheet.com/b/form?EQBCT=b253a23e3c0042f6a8380952415b53fe">form</a>.</aside>
 
 First, you need to get the Smartsheet for Salesforce app from Salesforce.com’s AppExchange. 
 
@@ -407,212 +406,7 @@ You may encounter this error message when attempting to use the Smartsheet for S
 If you see this error, it is because you are running version 1.5 or earlier of the Smartsheet for Salesforce app. In order to restore functionality, you will need to update to the latest version of the Smartsheet for Salesforce app.
 
 
-# <span class="customTOCSectionHeading">Data Manager - Beta</span>
+# <span class="customTOCSectionHeading">Data Manager</span>
 
-<%= partial "snippets/dataManagerOverview.md.erb" %>
+<aside class="warning">Data Manager has been retired and replaced with our new <b>Smartsheet for Salesforce</b> connector, which is currently in a private beta. To sign up for the beta, please fill out this <a href="https://app.smartsheet.com/b/form?EQBCT=b253a23e3c0042f6a8380952415b53fe">form</a>.</aside>
 
-## Private Beta
-
-The Data Manager feature is currently available via private beta only. 
-Private beta is a limited enrollment program during which we will work with a select group of Smartsheet customers to test and improve our Data Manager for Salesforce. 
-Participants will not only get early access to the app, but will also help us shape its roadmap.
-
-### How long will the private beta last?
-
-Before we release our app to the public, we want to make sure it is stable, performs well, and is sufficiently comprehensive to address key customer scenarios. Once we feel that these criteria have been met, the beta will be phased out and we will begin a public release. Updates will be provided once we are closer to closing the beta.
-
-### Who is eligible to participate in the private beta?
-
-**We are looking for power users that:**
-
-* Are current or prospective Salesforce users.
-* Have access to Salesforce today, either in sandbox or production.
-* Understand that this is beta software and may have issues.
-* Are willing to invest the time in testing the software.
-* Are willing to provide feedback on usability, defects or performance.
-
-Current Smartsheet customers can apply to participate in the private beta (see [the next section](#private-beta-enrollment) for enrollment instructions). 
-
-## Private Beta Enrollment
-
-<aside class="notice">Smartsheet users who belong to either an Enterprise account or Trial account <b>do not</b> need to enroll in the private beta. Access to the Data Manager feature of the Smartsheet for Salesforce app is enabled by default for these types of accounts.</aside>
-
-Smartsheet users who do not belong to an Enterprise account or Trial account can request access to the private beta by using the [online signup form](https://app.smartsheet.com/b/form?EQBCT=cecacfac4ecf46a2a3317f8cbd9fea48). 
-We will review your application and let you know whether you are a good fit for the private beta. 
-If approved, this will enable access to the Data Manager feature of the Smartsheeet for Salesforce app during its beta phase. **Public release will be limited to Enterprise accounts only.**
-
-## Requirements
-
-* Smartsheet [user license](http://help.smartsheet.com/customer/portal/articles/520100-user-types#licenseduser).
-* Access to Salesforce sandbox or production instance.
-* [Smartsheet for Salesforce](https://appexchange.salesforce.com/listingDetail?listingId=a0N30000003JSACEA4) version 2.2 or later.
-
-## <span class="customTOCSectionHeading">Installation - Beta</span>
-
-Version 2.2 (and higher) of the Smartsheet for Salesforce app includes the [Data Manager](#data-manager---beta) feature. 
-For information about installing the Smartsheet for Salesforce app, see [Installation](#installation).
-
-<aside class="notice">Smartsheet users belonging to an account type other than Enterprise or Trial must <a href="#private-beta-enrollment">enroll</a> in the private beta in order to access the Data Manager feature.</aside>
-
-## <span class="customTOCSectionHeading">Configuration - Beta</span>
-
-The Smartsheet for Salesforce app (version 2.2 and higher) contains two sets of features:
-
-* The "legacy" features which allow linking sheets to standard or custom objects (via related lists). **These "legacy" features are production quality and are not the focus of the private beta program - they have not changed and continue to work as before**. If you are interested in using these features, your Salesforce administrator must follow the [Installation](#installation) and [Configuraton](#configuration) instructions as described earlier in this documentation. 
-
-* The "Data Manager" feature is a brand new set of capabilities that enables **data export to Smartsheet**, **data import from Smartsheet**, and **two-way manual data updates**.  The Data Manager feature is available via a [private beta program](#private-beta) that is designed to provide our customers with early access to these new capabilities so that they can test-drive them and provide feedback to Smartsheet.  No additional configuration is required to enable the Data Manager.
-
-## Accessing Data Manager
-
-<aside class="notice">Once the Smartsheet for Salesforce app is installed in your Salesforce instance, you <b>do not</b> need to be a Salesforce administrator to use it.</aside>
-
-Navigate to the app menu and select **Smartsheet** from the dropdown:
-
-<img src="images/screenshots/platformSmartsheet.png" /><br/><br/>
-
-That will immediately take you to the Smartsheet Data Manager tab:
-
-<img src="images/screenshots/dataManager.png" /><br/><br/>
-
-## Accepting the User Agreement
-
-You will be asked to accept the private beta user agreement before proceeding:
-
-<aside class="notice">Note: This will only occur the first time you access the Data Manager.</aside>
-
-<img src="images/screenshots/userAgreement.png" /><br/><br/>
-
-## Connecting to Smartsheet
-
-Click **Connect to Smartsheet** after you check the **Accept License Agreement** box, then follow the steps to authorize access between the app and your Smartsheet account.
-
-## Permissions Set for Non-Admin Users
-
-<aside class="notice">Users of the Smartsheet Data Manager need access permissions (Read, Create, Edit,  and Delete) to all custom objects contained in the package. Users with <b>System Administrator</b> profiles are automatically granted those permissions and therefore don’t require any further configuration to use the Smartsheet Data Manager.</aside>
-
-If non-admin users need to use the Smartsheet Data Manager then the **system administrator** should login to the organization and create a permission set as displayed in the pictures below (click on the New button and see the text entered in the second picture).</br></br> 
-
-<ol>
-
-<li>Once the permission set is created, click on the <b>Smartsheet Permissions</b> link (as seen in the picture below) in order to edit its settings:</li></br>
-
-<img src="images/nonAdmin/1.png" /> </br></br>
-
-<img src="images/nonAdmin/2.png" /> </br></br>
-
-<li>When the page below appears, click the <b>Object Settings</b> link:</li></br>
-
-<img src="images/nonAdmin/3.png" /> </br></br>
-
-<li>When the page below appears, click on each of the package’s object name (the ones starting with <b>DL_</b>) for example: <b>DL_ColumnToFieldMappings</b>, <b>DL_Configs</b>, etc.</li></br>
-
-<img src="images/nonAdmin/4.png" /> </br></br>
-
-<li> </br></br>
-
-<ul>
-<li>When the page below appears click the <b>Edit</b> button.</li>
-
-<li>Select the <b>Object Permission</b> checkboxes for <b>Read</b> <b>Create</b> <b>Edit</b>, <b>Delete</b> (as seen below).</li>
-
-<li>For the <b>Field Permissions</b> section, select all available checkboxes. Some checkboxes cannot be selected because you cannot edit some standard object fields in Salesforce (e.g. Created By, id, Last Modified By).</li>
-
-<li>When you finish selecting the Object Permissions and Field Permissions for <b>all custom objects in the package</b>, then click on the <b>Manage Assignments</b> button.</li></br>
-
-</ul>
-
-<img src="images/nonAdmin/5.png" /> </br></br>
-
-<li>When the page below appears, then click on the <b>Add Assignments</b> button:</li></br>
-
-<img src="images/nonAdmin/6.png" /> </br></br>
-
-<li>When the page below appears, select the users that need access to the Smartsheet Data Manager and then click the <b>Assign</b> button:</li></br>
-
-<img src="images/nonAdmin/7.png" /> </br></br>
-
-</ol>
-
-
-## <span class="customTOCSectionHeading">Usage - Beta</span>
-
-<aside class="notice">This section covers creating, running, and modifying workflows. </aside>
-
-## Data Manager Dashboard
-
-The Data Manager default view is the Dashboard that includes buttons to create new Export or Import workflows, the list of existing workflows (if any), and the History tab: 
-
-<img src="images/screenshots/dataManagerDashboard.png" /><br/><br/> 
-
-## Creating a New Workflow
-
-To create an export or import workflow, click either the **New Export** or **New Import** button, then proceed through the 5 steps of the wizard to create the new workflow. 
-At the end of the process, your new export or import workflow will be immediately queued up for execution.
-
-<aside class="notice">Note: After you've created a new workflow, it is automatically saved as a reusable workflow to your Dashboard.</aside>
-
-<img src="images/screenshots/createNewWorkflow.png" /><br/><br/>
-
-### Insert vs Update Logic
-
-Data manager provides the ability to create new records or update existing records in Salesforce. When creating or modifying a workflow, you must map the Salesforce object ID field to a column in Smartsheet that is designated for Salesforce record IDs ("**ID column**"). 
-
-Workflows use the following rules to determine whether a record should be **created** or **updated** in Salesforce:
-
-* If a row in the "ID Column" is **empty**, then a new record is created in Salesforce for that Row.
-* If a row in the "ID Column" **contains data**, then Data Manager assumes a matching  record (with that record ID) already exists in Salesforce and attempts to update it.
-
-<aside class="notice"><b>Note</b>: Each Salesforce Object has a list of required Fields when importing. Data Manager will list those required fields during the mapping step even though the "ID Column" can be blank (for inserts). 
-</br></br>
-In the following  example, the required fields are:
-<ul>
-<li>Name</li>
-<li>StageName</li>
-<li>CloseDate</li>
-</ul>
-These fields will need data in the associated Columns in Smartsheet, otherwise the import will fail.
-</aside>
-
-Here’s the dialogue which prompts you to map your Smartsheet Columns and Salesforce Fields. You can see we’ve mapped the **ID** Column in Smartsheet to the **Opportunity ID** Field in Salesforce:
-
-<aside class="success">Note: We chose to import an <b>Opportunity</b> from Smartsheet into Salesforce for this example.</aside>
-
-<img src="images/screenshots/mapID.png" /> </br></br>
-
-Based on the "ID Column" in the screenshot below, Data Manager will **update** the first 2 records, and **create** 1 new record in Salesforce (because the third row in the "ID Column" contains no data):
-
-<img src="images/screenshots/createRecord.png" /> </br></br>
-
-## Running an Existing Workflow
-
-Once you create a workflow, you can run it any time from your Dashboard to update the mapped fields in the specified destination with the most current data from the specified source.
-
-<aside class="warning"><b>IMPORTANT</b>: When you run an existing workflow, it will <b>overwrite</b> the mapped fields in the specified destination with the most current data from the specified source.</aside>
-
-<img src="images/screenshots/runExistingWorkflow.png" /><br/><br/>
-
-## Modifying an Existing Workflow
-
-You can modify an existing workflow (e.g., map additional fields, add filters, etc.) without running it by clicking on the adjacent gear icon.
-
-<img src="images/screenshots/modifyExistingWorkflow.png" /><br/><br/>
-
-## Workflow Status and History
-
-The History tab on the Dashboard lists every workflow that is currently queued or has previously executed. 
-It will also display warnings or error messages if a workflow did not process correctly.
-
-<aside class="notice">Use the refresh icon (located next to the History tab) to update the status of workflows that are currently processing.</aside>
-
-<img src="images/screenshots/checkStatus.png" /><br/><br/>
-
-## <span class="customTOCSectionHeading">FAQ - Beta</span>
-
-### Why am I seeing the "Salesforce integration is not enabled for this Smartsheet user..." error?
-
-After you attempt to **Connect to Smartsheet** from within the Data Manager, you may see this error message:
-
-<img src="images/screenshots/faq1.png" /> <br/><br/>
-
-If you see this message, it's because your Smartsheet account has not been enrolled in the [private beta program](#private-beta) for the Data Manager feature. 
-Please see the [Private Beta Enrollment](#private-beta-enrollment) section for more information, or contact us at [api@smartsheet.com](mailto:api@smartsheet.com) if you believe this message is in error.

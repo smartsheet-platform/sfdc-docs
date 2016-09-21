@@ -244,7 +244,7 @@ html, body {
   }
 
   // Section headers
-  .tocify-item[data-unique="getting-started"], .tocify-item[data-unique="data-manager---beta"], .tocify-item[data-unique|="installation"], .tocify-item[data-unique|="installation-beta"], .tocify-item[data-unique|="faq---beta"], .tocify-item[data-unique|="configuration-beta"], .tocify-item[data-unique|="usage---beta"], .tocify-item[data-unique|="configuration"], .tocify-item[data-unique="faq"] {
+  .tocify-item[data-unique="getting-started"], .tocify-item[data-unique="data-manager"], .tocify-item[data-unique|="installation"], .tocify-item[data-unique|="installation-beta"], .tocify-item[data-unique|="faq---beta"], .tocify-item[data-unique|="configuration-beta"], .tocify-item[data-unique|="usage---beta"], .tocify-item[data-unique|="configuration"], .tocify-item[data-unique="faq"] {
 	text-transform: uppercase;
 	margin-top: 1em;
 	margin-bottom: 0.5em;
@@ -252,7 +252,7 @@ html, body {
 	font-weight: bold;
   }
 
-  .tocify-item[data-unique="getting-started"]:hover, .tocify-item[data-unique="data-manager---beta"], .tocify-item[data-unique|="installation"], .tocify-item[data-unique|="installation-beta"], .tocify-item[data-unique|="configuration-beta"], .tocify-item[data-unique|="faq---beta"], .tocify-item[data-unique|="usage---beta"]:hover, .tocify-item[data-unique|="configuration"], .tocify-item[data-unique|="faq"]:hover {
+  .tocify-item[data-unique="getting-started"]:hover, .tocify-item[data-unique="data-managerbeta"], .tocify-item[data-unique|="installation"], .tocify-item[data-unique|="installation-beta"], .tocify-item[data-unique|="configuration-beta"], .tocify-item[data-unique|="faq---beta"], .tocify-item[data-unique|="usage---beta"]:hover, .tocify-item[data-unique|="configuration"], .tocify-item[data-unique|="faq"]:hover {
 	color: $nav-text;
   }
 
