@@ -5,10 +5,10 @@
 This document outlines the process for publishing the Smartsheet for Salesforce User Guide onto Github Pages. The actual Smartsheet for Salesforce documentation can be viewed [here](http://smartsheet-platform.github.io/sfdc-docs). 
 
 ## Why git version tags?
-Git tags are a nice way to keep track of the versions of the documentation. The version of the documentation should match the version of the Smartsheet for Salesforce code that it supports.
+Git tags are a nice way to keep track of the versions of the documentation. The version of the documentation should match the version of the Smartsheet for Salesforce code that it supports.  Example tag name might be `v1.0.1`. This can be added with the following command `git tag v1.0.1`.
 
 ## Understanding the publish command
-The `rake publish` command bundles all of the resources in the `source/` directory to create static assets in a local directory called `bundle/`. These static assesst are then pushed into the `gh-pages` branch. Github pages hosts the contents of the `gh-pages` for public viewing. Only Admins and Owners of the repository have push access into the `gh-pages` repo, so `rake publish` command will fail for anyone else.
+The `rake publish` command bundles all of the resources in the `source/` directory to create static assets in a local directory called `bundle/`. These static assets are then pushed into the `gh-pages` branch. Github pages hosts the contents of the `gh-pages` for public viewing. Only Admins and Owners of the repository have push access into the `gh-pages` repo, so `rake publish` command will fail for anyone else.
 
 `rake publish` script details are located in `Rakefile` and `config.rb`.
 
